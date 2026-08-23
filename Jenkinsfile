@@ -6,7 +6,6 @@ pipeline {
     }
 
     stages {
-
         stage('Build') {
             steps {
                 echo 'Building application...'
@@ -33,11 +32,9 @@ pipeline {
         success {
             echo 'Pipeline completed successfully!'
         }
-
         failure {
             echo 'Pipeline failed!'
         }
-
         always {
             echo 'Pipeline execution finished.'
         }
