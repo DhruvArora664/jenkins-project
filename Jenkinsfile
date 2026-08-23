@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url:'https://github.com/DhruvArora664/jenkins-project.git'
-            }
-        }
 
         stage('Build') {
             steps {
@@ -18,14 +12,14 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
+                echo 'Testing the project...'
                 bat 'echo Tests completed successfully'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
+                echo 'Deploying the project...'
                 bat 'echo Deployment completed successfully'
             }
         }
